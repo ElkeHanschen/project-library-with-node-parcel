@@ -3,31 +3,114 @@
 }
 
 body {
-  background-color: #adadad;
+  --pink: #ed2754;
+  --white: #eee;
+  --black: #111;
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
 
-.anim-container {
+.pen {
   align-items: center;
-  background-color: lightblue;
   display: flex;
-  flex-direction: column;
+  flex: 1 1 100%;
   justify-content: center;
-  margin: 0 auto;
-  min-height: 400px;
+
+  @media (max-width: 620px) {
+    flex-direction: column-reverse;
+  }
 }
 
-.anim-box {
-  background-color: #0074d9;
+.color {
+  --size: 250px;
+  background-color: #f00;
+  border: 3px solid #fff;
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  flex: 0 0 var(--size);
+  height: var(--size);
+  width: var(--size);
+
+  @media (max-width: 620px) {
+    --size: 175px;
+  }
 }
-.anim-subline {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  text-align: center;
+
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.slider {
+  --v-margin: 40px;
+  margin-right: 40px;
+  position: relative;
+  width: 300px;
+
+  @media (max-width: 500px) {
+    margin-right: 0;
+  }
+}
+
+.bar-hit-area {
+  background: rgba(0, 0, 0, 0);
+  padding: 20px 0;
+}
+.bar-hit-area .bar {
+  border-radius: 3px;
+  height: 6px;
+}
+
+.handle-hit-area {
+  background: rgba(0, 0, 0, 0);
+  left: -20px;
+  padding: 10px;
+  position: absolute;
+  top: 2px;
+}
+
+.handle {
+  background: hsl(0, 100%, 50%);
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+}
+
+.hue .bar {
+  background: linear-gradient(
+    to right,
+    hsl(calc(0 * 60), 100%, 50%),
+    hsl(calc(1 * 60), 100%, 50%),
+    hsl(calc(2 * 60), 100%, 50%),
+    hsl(calc(3 * 60), 100%, 50%),
+    hsl(calc(4 * 60), 100%, 50%),
+    hsl(calc(5 * 60), 100%, 50%),
+    hsl(calc(6 * 60), 100%, 50%)
+  );
+}
+
+.saturation .bar {
+  background: linear-gradient(to right, hsl(0, 0%, 50%), hsl(0, 100%, 50%));
+}
+.saturation .handle-hit-area {
+  transform: translateX(100%);
+}
+
+.lightness .bar {
+  background: linear-gradient(
+    to right,
+    hsl(0, 100%, 0%),
+    hsl(0, 100%, 50%),
+    hsl(0, 100%, 100%)
+  );
+}
+
+.lightness.handle-hit-area {
+  transform: translateX(50%);
 }

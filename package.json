@@ -1,0 +1,22 @@
+ {
+  "name": "project-integrate-via-node",
+  "version": "1.0.0",
+  "description": "to change!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElkeHanschen/project-integrate-library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElkeHanschen/project-integrate-library/issues"
+  },
+  "homepage": "https://github.com/ElkeHanschen/project-integrate-library#readme",
+  "dependencies": {
+    "popmotion": "^9.0.1"
+  }
+}
