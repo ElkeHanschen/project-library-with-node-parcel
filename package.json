@@ -1,4 +1,4 @@
- {
+{
   "name": "project-integrate-via-node",
   "version": "1.0.0",
   "description": "to change!",
@@ -8,15 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ElkeHanschen/project-integrate-library.git"
+    "url": "git+https://github.com/EllyPirelly/project-integrate-library.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ElkeHanschen/project-integrate-library/issues"
+    "url": "https://github.com/EllyPirelly/project-integrate-library/issues"
   },
-  "homepage": "https://github.com/ElkeHanschen/project-integrate-library#readme",
+  "homepage": "https://github.com/EllyPirelly/project-integrate-library#readme",
   "dependencies": {
     "popmotion": "^9.0.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
   }
 }
